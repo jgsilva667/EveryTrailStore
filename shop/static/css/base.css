@@ -87,6 +87,15 @@ form p label, form p input {
     clear:both;
 }
 
+form div input {
+    background: rgb(232, 240, 254) !important;;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 5px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
 #login {
     margin-top: 1em;
     float:left ;
