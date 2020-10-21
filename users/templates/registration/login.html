@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "shop/base.html" %}
+
+{% block title %}Log In{% endblock title %}
+
+{% block content %}
+<h2>Log In</h2>
+    {%  if form.errors %}
+    <p>
+    Your username and password didn't match.
+    Please try again.
+    </p>
+
+    {%  endif %}
+    <div class ="login-form">
+     <form  action=""{%  url 'login' %} method="post">
+         {{  form.as_p }}
+         {%  csrf_token %}
+         <input type="hidden" name="next" value="{{  next }}"/>
+         <button id = "login" class="btn btn-success mt-4" type="submit">Log In</button>
+     </form>
+    </div>
+
+    {# Assumes you setup the password_reset view in your URLconf #}
+    <p id ="login"><a href="#">Forgot password?</a></p>
+{% endblock content %}
