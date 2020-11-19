@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EveryTail</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div>
+        <img src="Everytail.png" alt="logo" class="left">
+    </div>
+
+    <div class="nav-area">
+        <a href="products.html">Products</a>
+        <a href="#">Sign-Up/Log-In</a>
+        <a href="#">Contact Us</a>
+        <a href="favList.html">My Cart</a>
+    </div>
+    <div class="banner-text">
+        <h1>Our Products</h1>
+    </div>
+
+    <div>
+        <img src="sunglasses.JPG" alt="Ray-Ban Classic Shades" class="left-A">
+    </div>
+    <div>
+        <script>
+        function addItem(){
+        var li = document.createElement("LI");
+        var input = document.getElementById("add");
+        li.innerHTML = input.value;
+        input.value = "";
+
+        document.getElementById("faves").appendChild(li);
+        }
+        </script>
+<input type="button" id="btnAdd" value="Add to Favorites" onclick="addItem()">
+    </div>
+
+
+</body>
+</html>
